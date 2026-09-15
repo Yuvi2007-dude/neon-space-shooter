@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -12,9 +13,126 @@
 
 <body>
 
-    <canvas id="gameCanvas"></canvas>
+    <main class="game-container">
+
+        <!-- Game Header -->
+        <header class="game-header">
+
+            <h1>🚀 Neon Space Shooter</h1>
+
+            <div class="hud">
+
+                <span>
+                    Score:
+                    <strong id="score">0</strong>
+                </span>
+
+                <span>
+                    Lives:
+                    <strong id="lives">3</strong>
+                </span>
+
+                <span>
+                    Level:
+                    <strong id="level">1</strong>
+                </span>
+
+                <span>
+                    High Score:
+                    <strong id="highScore">0</strong>
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- Game Canvas -->
+        <section class="canvas-wrapper">
+
+            <canvas
+                id="gameCanvas"
+                width="800"
+                height="600">
+            </canvas>
+
+            <!-- Start Screen -->
+            <div id="startScreen" class="game-screen">
+
+                <h2>NEON SPACE SHOOTER</h2>
+
+                <p>Destroy the enemies and survive as long as possible.</p>
+
+                <p class="controls-text">
+                    Move: WASD / Arrow Keys
+                    <br>
+                    Shoot: SPACE
+                    <br>
+                    Pause: P
+                </p>
+
+                <button id="startButton">
+                    START GAME
+                </button>
+
+            </div>
+
+
+            <!-- Pause Screen -->
+            <div id="pauseScreen" class="game-screen hidden">
+
+                <h2>PAUSED</h2>
+
+                <p>Press P to continue</p>
+
+            </div>
+
+
+            <!-- Game Over Screen -->
+            <div id="gameOverScreen" class="game-screen hidden">
+
+                <h2>GAME OVER</h2>
+
+                <p>
+                    Final Score:
+                    <strong id="finalScore">0</strong>
+                </p>
+
+                <button id="restartButton">
+                    PLAY AGAIN
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Controls -->
+        <section class="controls">
+
+            <button id="leftButton">◀</button>
+
+            <button id="upButton">▲</button>
+
+            <button id="downButton">▼</button>
+
+            <button id="rightButton">▶</button>
+
+            <button id="shootButton">🔥</button>
+
+        </section>
+
+
+        <!-- Audio -->
+        <button id="soundButton" class="sound-button">
+            🔊 Sound ON
+        </button>
+
+    </main>
+
 
     <script src="js/main.js"></script>
 
 </body>
+
 </html>
